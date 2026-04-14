@@ -1,0 +1,3 @@
+﻿unique_identification,hospital,patient_ID,bpCR,age,age_menarche,BMI,Ki_67,Ki_67_status,treatment_duration,NAC_treatment_cycle,endocrine,NAC_classification,HER2_status,PR_status,ER_status,Histological_type,result_ipsilateral_axillary_LNP,T_stage,T_stage_t,N_stage,N_stage_n,M_stage,enlargement_unilateral_axillary_LN,enlargement_unilateral_clavicular_LN,enlargement_Ipsilateral_internal_mammary_LN,target_lesion_location,target_lesion_quadrant
+1,1,1337416,0,34,13,22.03172568,0.2,1,3,2,0,1,1,1,1,3,0,4,1,2,1,0,1,0,0,2,4
+2,1,1331323,1,26,12,26.66666667,0.5,1,3,2,0,1,2,0,0,3,0,2,0,1,0,0,1,0,0,1,4
