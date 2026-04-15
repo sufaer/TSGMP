@@ -8,7 +8,7 @@ Pathologic complete response (pCR) is a critical indicator for evaluating neoadj
 Due to privacy and ethical regulations, the original patient data from the multi-center study cannot be shared publicly. The Data_sample/directory provides example data formats and scripts to help users structure their own data for the pipeline.
 
 A general data preparation pipeline includes:
-- Medical Images:​ Pre-treatment multi-parametric MRI (e.g., T1, T2, DWI, DCE sequences). For the first stage, longitudinal scans are needed.
+- Medical Images:​ Pre-treatment multi-parametric MRI (e.g., DWI, DCE sequences). For the first stage, longitudinal scans are needed.
 - Radiomics Features:​ Extracted from the Region of Interest (ROI) on pre-treatment images using tools like pyradiomics.
 - Clinical Data:​ Tabular data (e.g., age, subtype, tumor grade).
 
