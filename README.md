@@ -7,25 +7,25 @@ Pathologic complete response (pCR) is a critical indicator for evaluating neoadj
 # 🚀 Usage
 The workflow follows the two-stage architecture.
 
-1. Data Preprocessing and Feature Extraction
+**1. Data Preprocessing and Feature Extraction**
 
 This step prepares the static pre-treatment data for the second stage.
 
-**- /Data_process/crop.py:** Crops the tumor Region of Interest (ROI) from medical images.
+- **/Data_process/crop.py:** Crops the tumor Region of Interest (ROI) from medical images.
 
-**- /Data_process/radiomics_feature_extractor.py:** Extracts hand-crafted radiomics features.
+- **/Data_process/radiomics_feature_extractor.py:** Extracts hand-crafted radiomics features.
 
-2. First Stage - Dynamic Encoder Pre-training
+**2. First Stage - Dynamic Encoder Pre-training**
 
 This stage trains an encoder on longitudinal​ MRI data to learn generalizable dynamic features.
 
-**- /First_stage/train_first.py:** Training script for the first-stage multi-task encoder. It processes longitudinal data to capture tumor evolution patterns.
+- **/First_stage/train_first.py:** Training script for the first-stage multi-task encoder. It processes longitudinal data to capture tumor evolution patterns.
 
-3. Second Stage - Multimodal Fusion and Prediction
+**3. Second Stage - Multimodal Fusion and Prediction**
 
 This stage uses pre-processed data, clinical data, and extracted radiomics features for final pCR prediction.
 
-**- /Second_stage/main.ipynb:** Jupyter Notebook containing the complete pipeline for the second stage. It includes:
+- **/Second_stage/main.ipynb:** Jupyter Notebook containing the complete pipeline for the second stage. It includes:
 
     - Loading the pre-trained encoder from First Stage
 
@@ -38,14 +38,14 @@ This stage uses pre-processed data, clinical data, and extracted radiomics featu
 # 📊 Data
 Due to privacy and ethical regulations, the original patient data from the multi-center study cannot be shared publicly. However, to facilitate research, we are providing processed, de-identified data.​ This dataset includes pre- and post-treatment cropped ROI images, clinical data, and extracted radiomics features from 1292 patients across five medical centers. You can download it from the following link: [Dataset Release (GitHub)](https://github.com/sufaer/TSGMP/releases/tag/dataset).
 
-**Note:**​ The provided data is in a processed format for model training and validation. The Data_sample/directory provides example scripts to illustrate the data structure and facilitate the use of your own data.
+**Note:** The provided data is in a processed format for model training and validation. The Data_sample/directory provides example scripts to illustrate the data structure and facilitate the use of your own data.
 
 A general data preparation pipeline includes:
 
-**- Medical Images:**​ Pre-treatment multi-parametric MRI (e.g., DWI, DCE sequences). For the first stage, longitudinal scans are needed.
+- **Medical Images:** Pre-treatment multi-parametric MRI (e.g., DWI, DCE sequences). For the first stage, longitudinal scans are needed.
 
-**- Radiomics Features:**​ Extracted from the Region of Interest (ROI) on pre-treatment images using tools like pyradiomics.
+- **Radiomics Features:** Extracted from the Region of Interest (ROI) on pre-treatment images using tools like pyradiomics.
 
-**- Clinical Data:**​ Tabular data (e.g., age, subtype, tumor grade).
+- **Clinical Data:** Tabular data (e.g., age, subtype, tumor grade).
 
 To reproduce the key results reported in the paper: Prepare your dataset according to the structure outlined in Data_sample/.
